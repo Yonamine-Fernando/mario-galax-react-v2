@@ -26,7 +26,7 @@ function Hero() {
         <Star size={72} position="left" />
         <Star size={100} position="center" />
         <Star size={30} position="right" />
-        <Star size={200} position="top" />
+        <Star size={30} position="top" />
       </div>
       <div className="hero__content-layer">
         <div className="hero__badge">NOS CINEMAS AGORA</div>
