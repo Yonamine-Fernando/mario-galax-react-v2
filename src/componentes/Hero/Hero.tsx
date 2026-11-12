@@ -1,11 +1,11 @@
 import Star from "./Star";
 
-import marioVideo from "../assets/videos/mario-clip-alpha.webm";
-import yoshiVideo from "../assets/videos/yoshi-video-alpha.webm";
-import planetVideo from "../assets/videos/planet-3d-alpha.webm";
-import marioMp4 from "../assets/videos/mario-clip-min.mp4";
-import yoshiMp4 from "../assets/videos/yoshi-video-min.mp4";
-import planetMp4 from "../assets/videos/planet-3d-min.mp4";
+import marioVideo from "../../assets/videos/mario-clip-alpha.webm";
+import marioMp4 from "../../assets/videos/mario-clip-min.mp4";
+import planetVideo from "../../assets/videos/planet-3d-alpha.webm";
+import planetMp4 from "../../assets/videos/planet-3d-min.mp4";
+import yoshiVideo from "../../assets/videos/yoshi-video-alpha.webm";
+import yoshiMp4 from "../../assets/videos/yoshi-video-min.mp4";
 
 function Hero() {
   return (

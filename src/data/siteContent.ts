@@ -25,12 +25,30 @@ export const NAV_ITEMS: NavItem[] = [
 ];
 
 export const CHARACTERS: Character[] = [
-  { name: "Mario", className: "personagem--mario", image: "assets/images/mario-original.webp", width: 520, height: 620 },
+  {
+    name: "Mario",
+    className: "personagem--mario",
+    image: "assets/images/mario-original.webp",
+    width: 520,
+    height: 620,
+  },
   { name: "Luigi", className: "personagem--luigi", image: "assets/images/luigi.webp", width: 440, height: 560 },
   { name: "Peach", className: "personagem--peach", image: "assets/images/peach.webp", width: 380, height: 500 },
-  { name: "Rosalina", className: "personagem--rosalina", image: "assets/images/rosalina.webp", width: 400, height: 560 },
+  {
+    name: "Rosalina",
+    className: "personagem--rosalina",
+    image: "assets/images/rosalina.webp",
+    width: 400,
+    height: 560,
+  },
   { name: "Yoshi", className: "personagem--yoshi", image: "assets/images/yoshi-perso.webp", width: 620, height: 440 },
-  { name: "Bowser Jr.", className: "personagem--bowser-jr", image: "assets/images/bowser-jr.webp", width: 420, height: 480 },
+  {
+    name: "Bowser Jr.",
+    className: "personagem--bowser-jr",
+    image: "assets/images/bowser-jr.webp",
+    width: 420,
+    height: 480,
+  },
 ];
 
 export const MARQUEE_TEXTS = [

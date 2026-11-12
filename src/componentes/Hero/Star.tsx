@@ -1,4 +1,4 @@
-import starhero from "../assets/images/estrela-min.webp";
+import starhero from "../../assets/images/estrela-min.webp";
 type StarProps = {
   position: "left" | "right" | "center" | "top";
   size: number;

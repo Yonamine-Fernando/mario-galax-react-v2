@@ -1,3 +1,5 @@
+@import "tailwindcss";
+
 :root {
   /* Fonte Outfit (carregue via Google Fonts ou self-host; variáveis abaixo) */
   --font-outfit: "Outfit", ui-sans-serif, system-ui, sans-serif;
@@ -654,9 +656,8 @@ body {
 }
 
 /* Personagens — composição freeform (parallax rail: min-height 100vh; sem grid nos personagens) */
-.personagens {
+.characters {
   --personagens-stage-min-h: clamp(26rem, 52vh, 38rem);
-
   position: relative;
   isolation: isolate;
   width: 100%;
@@ -670,7 +671,7 @@ body {
   background-color: transparent;
 }
 
-.personagens__particles-bg {
+.characters__particles-bg {
   position: absolute;
   inset: 0;
   z-index: 0;
@@ -682,18 +683,18 @@ body {
   transition: background 500ms var(--ease-in-out-soft);
 }
 
-#personagens-particles-js {
+#characters-particles-js {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
 }
 
-#personagens-particles-js canvas {
+#character-particles-js canvas {
   pointer-events: auto;
 }
 
-.personagens__header {
+.characters__header {
   position: relative;
   z-index: 2;
   flex-shrink: 0;
@@ -702,7 +703,7 @@ body {
   text-align: center;
 }
 
-.personagens__eyebrow {
+.characters__eyebrow {
   margin: 0 0 var(--space-2);
   font-family: var(--font-body);
   font-size: var(--fs-xs);
@@ -715,7 +716,7 @@ body {
   animation: personagens-header-in 760ms var(--ease-out-expo) forwards;
 }
 
-.personagens__title {
+.characters__title {
   margin: 0 0 var(--space-2);
   font-family: var(--font-body);
   font-size: var(--fs-display);
@@ -727,7 +728,7 @@ body {
   animation: personagens-header-in 760ms var(--ease-out-expo) 55ms forwards;
 }
 
-.personagens__subtitle {
+.characters__subtitle {
   margin: 0;
   font-family: var(--font-body);
   font-size: var(--fs-xs);
@@ -737,10 +738,10 @@ body {
   text-transform: uppercase;
   color: var(--text-muted);
   opacity: 0;
-  animation: personagens-header-in 760ms var(--ease-out-expo) 110ms forwards;
+  animation: characters-header-in 760ms var(--ease-out-expo) 110ms forwards;
 }
 
-@keyframes personagens-header-in {
+@keyframes characteres-header-in {
   from {
     opacity: 0;
     transform: translate3d(0, 0.85rem, 0);
@@ -751,7 +752,7 @@ body {
   }
 }
 
-.personagens__stage {
+.characters__stage {
   position: relative;
   z-index: 1;
   width: 100%;
@@ -761,7 +762,7 @@ body {
   flex-shrink: 0;
 }
 
-.personagem {
+.character {
   position: absolute;
   z-index: 1;
   display: flex;
@@ -771,17 +772,17 @@ body {
   width: max-content;
   max-width: min(94vw, 360px);
   opacity: 0;
-  animation: personagem-reveal-opacity-only 740ms var(--ease-out-expo) forwards;
+  animation: character-reveal-opacity-only 740ms var(--ease-out-expo) forwards;
 }
 
-.personagem img {
+.character img {
   display: block;
   width: var(--pers-img-w);
   height: auto;
   max-width: 100%;
 }
 
-.personagem figcaption {
+.character figcaption {
   margin: var(--space-2) 0 0;
   font-family: var(--font-body);
   font-size: var(--fs-sm);
@@ -792,7 +793,7 @@ body {
 }
 
 /* Só opacity: o parallax GSAP controla transform nos figures (evita conflito com keyframes) */
-@keyframes personagem-reveal-opacity-only {
+@keyframes character-reveal-opacity-only {
   from {
     opacity: 0;
   }
@@ -802,28 +803,28 @@ body {
 }
 
 /* Quadrantes distintos: top/left únicos por checklist; escalas grandes / médias / menor */
-.personagem--mario {
+.character--mario {
   top: 3%;
   left: 18%;
   z-index: 5;
   animation-delay: calc(var(--stagger-base) * 1);
 }
 
-.personagem--luigi {
+.character--luigi {
   top: 8%;
   left: 65%;
   z-index: 4;
   animation-delay: calc(var(--stagger-base) * 2);
 }
 
-.personagem--peach {
+.character--peach {
   top: 65%;
   left: 41%;
   z-index: 3;
   animation-delay: calc(var(--stagger-base) * 3);
 }
 
-.personagem--rosalina {
+.character--rosalina {
   --pers-img-w: clamp(128px, 15vw, 200px);
 
   top: 114%;
@@ -832,7 +833,7 @@ body {
   animation-delay: calc(var(--stagger-base) * 4);
 }
 
-.personagem--yoshi {
+.character--yoshi {
   --pers-img-w: clamp(200px, 27vw, 340px);
 
   top: 94%;
@@ -841,7 +842,7 @@ body {
   animation-delay: calc(var(--stagger-base) * 5);
 }
 
-.personagem--bowser-jr {
+.character--bowser-jr {
   top: 158%;
   left: 41%;
   z-index: 2;
@@ -849,54 +850,54 @@ body {
 }
 
 @media (min-width: 768px) and (max-width: 1023.98px) {
-  .personagens {
+  .characters {
     --personagens-stage-min-h: clamp(23rem, 48vh, 34rem);
   }
 
-  .personagem--mario {
+  .character--mario {
     left: 2%;
     top: 12%;
   }
 
-  .personagem--luigi {
+  .character--luigi {
     left: 72%;
     top: 7%;
   }
 
-  .personagem--peach {
+  .character--peach {
     left: 22%;
     top: 39%;
   }
 
-  .personagem--rosalina {
+  .character--rosalina {
     left: 62%;
     top: 41%;
   }
 
-  .personagem--yoshi {
+  .character--yoshi {
     left: 1%;
     top: 61%;
     --pers-img-w: clamp(174px, 30vw, 300px);
   }
 
-  .personagem--bowser-jr {
+  .character--bowser-jr {
     left: 48%;
     top: 66%;
   }
 }
 
 @media (max-width: 767.98px) {
-  .personagens {
+  .characters {
     justify-content: flex-start;
     padding-block: clamp(var(--space-10), 6vw, var(--space-16));
     --personagens-stage-min-h: 0;
   }
 
-  .personagens__stage {
+  .character__stage {
     min-height: 0;
   }
 
-  .personagem {
+  .character {
     position: relative;
     inset: auto;
     width: fit-content;
@@ -911,7 +912,7 @@ body {
     margin-bottom: 0;
   }
 
-  .personagem--mario {
+  .character--mario {
     top: auto;
     left: auto;
     margin-inline-start: 6%;
@@ -919,7 +920,7 @@ body {
     --pers-img-w: clamp(160px, 58vw, 240px);
   }
 
-  .personagem--luigi {
+  .character--luigi {
     top: auto;
     left: auto;
     margin-inline-start: auto;
@@ -927,7 +928,7 @@ body {
     --pers-img-w: clamp(120px, 44vw, 190px);
   }
 
-  .personagem--peach {
+  .character--peach {
     top: auto;
     left: auto;
     margin-inline-start: 14%;
@@ -935,7 +936,7 @@ body {
     --pers-img-w: clamp(100px, 40vw, 160px);
   }
 
-  .personagem--rosalina {
+  .character--rosalina {
     top: auto;
     left: auto;
     margin-inline-start: auto;
@@ -943,7 +944,7 @@ body {
     --pers-img-w: clamp(116px, 46vw, 176px);
   }
 
-  .personagem--yoshi {
+  .character--yoshi {
     top: auto;
     left: auto;
     margin-inline-start: 5%;
@@ -951,7 +952,7 @@ body {
     --pers-img-w: clamp(180px, 68vw, 280px);
   }
 
-  .personagem--bowser-jr {
+  .character--bowser-jr {
     top: auto;
     left: auto;
     margin-inline-start: auto;
@@ -961,14 +962,14 @@ body {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .personagens__eyebrow,
-  .personagens__title,
-  .personagens__subtitle {
+  .characters__eyebrow,
+  .characters__title,
+  .characters__subtitle {
     animation: none;
     opacity: 1;
   }
 
-  .personagem {
+  .character {
     animation: none !important;
     opacity: 1;
   }
