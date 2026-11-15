@@ -752,7 +752,7 @@ body {
   }
 }
 
-.characters__stage {
+.characters-stage {
   position: relative;
   z-index: 1;
   width: 100%;
@@ -803,28 +803,28 @@ body {
 }
 
 /* Quadrantes distintos: top/left únicos por checklist; escalas grandes / médias / menor */
-.character--mario {
+.character-mario {
   top: 3%;
   left: 18%;
   z-index: 5;
   animation-delay: calc(var(--stagger-base) * 1);
 }
 
-.character--luigi {
+.character-luigi {
   top: 8%;
   left: 65%;
   z-index: 4;
   animation-delay: calc(var(--stagger-base) * 2);
 }
 
-.character--peach {
+.character-peach {
   top: 65%;
   left: 41%;
   z-index: 3;
   animation-delay: calc(var(--stagger-base) * 3);
 }
 
-.character--rosalina {
+.character-rosalina {
   --pers-img-w: clamp(128px, 15vw, 200px);
 
   top: 114%;
@@ -833,7 +833,7 @@ body {
   animation-delay: calc(var(--stagger-base) * 4);
 }
 
-.character--yoshi {
+.character-yoshi {
   --pers-img-w: clamp(200px, 27vw, 340px);
 
   top: 94%;
@@ -842,7 +842,7 @@ body {
   animation-delay: calc(var(--stagger-base) * 5);
 }
 
-.character--bowser-jr {
+.character-bowser-jr {
   top: 158%;
   left: 41%;
   z-index: 2;
@@ -854,33 +854,33 @@ body {
     --personagens-stage-min-h: clamp(23rem, 48vh, 34rem);
   }
 
-  .character--mario {
+  .character-mario {
     left: 2%;
     top: 12%;
   }
 
-  .character--luigi {
+  .character-luigi {
     left: 72%;
     top: 7%;
   }
 
-  .character--peach {
+  .character-peach {
     left: 22%;
     top: 39%;
   }
 
-  .character--rosalina {
+  .character-rosalina {
     left: 62%;
     top: 41%;
   }
 
-  .character--yoshi {
+  .character-yoshi {
     left: 1%;
     top: 61%;
     --pers-img-w: clamp(174px, 30vw, 300px);
   }
 
-  .character--bowser-jr {
+  .character-bowser-jr {
     left: 48%;
     top: 66%;
   }
